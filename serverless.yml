@@ -1,0 +1,21 @@
+service:
+  name: serverless-bittorrent-tracker
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+functions:
+  hello:
+    handler: src/index.handler
+    events:
+      # - http: GET hello
+      # - httpApi:
+      #     method: GET
+      #     path: /
+      - httpApi: '*'
