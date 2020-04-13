@@ -1,4 +1,4 @@
-import 'source-map-support/register'
+import 'source-map-support/register' // another option is to use `new webpack.BannerPlugin('require("source-map-support").install();', {raw: true,entryOnly: false})`
 
 import { Handler } from 'aws-lambda'
 import { createServer } from './server'
