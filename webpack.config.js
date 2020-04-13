@@ -24,6 +24,7 @@ module.exports = {
       skipSuccessful: true,
     }),
   ],
+  devtool: 'inline-source-map',
   externals: 'aws-sdk',
   module: {
     rules: [

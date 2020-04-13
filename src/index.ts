@@ -1,4 +1,7 @@
+import 'source-map-support/register'
+
 import { Handler } from 'aws-lambda'
+import { createServer } from './server'
 
 // const Server = require('bittorrent-tracker').Server;
 
@@ -79,13 +82,13 @@ import { Handler } from 'aws-lambda'
 
 // get the number of leechers for a particular torrent
 // server.torrents[infoHash].incomplete;
-{
-}
 // get the peers who are in a particular torrent swarm
 // server.torrents[infoHash].peers;
 
 export const handler: Handler = async (event, context) => {
   console.log('ℹ️', { event, context })
+
+  const server = createServer()
 
   return { statusCode: 200, body: '👋🌍' }
 }

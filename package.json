@@ -4,14 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "bittorrent-tracker": "^9.14.5"
+    "bittorrent-tracker": "^9.14.5",
+    "source-map-support": "^0.5.16"
   },
   "scripts": {
     "start": "serverless offline",
     "deploy": "serverless deploy --aws-profile casper --stage dev",
     "remove": "serverless remove --aws-profile casper --stage dev",
     "stackinfo": "AWS_PROFILE=casper aws cloudformation describe-stacks --stack-name serverless-bittorrent-tracker-dev",
-    "build": "serverless package"
+    "build": "serverless package",
+    "package": "serverless package"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.48",
